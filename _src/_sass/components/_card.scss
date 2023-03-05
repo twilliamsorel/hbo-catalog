@@ -1,0 +1,49 @@
+.component.card {
+  width: 100%;
+  border: none;
+
+  img {
+    border-radius: 4px 4px 0 0;
+  }
+
+  header {
+    padding: 8px 12px;
+    background: #555;
+    color: white;
+    min-height: 52px;
+  }
+
+  .body {
+    padding: 12px;
+
+    .rating.green {
+      color: green;
+    }
+
+    .genres {
+      margin-top: 12px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .genre-tag {
+      background: #666;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+  }
+
+  button {
+    border: none;
+    padding: 8px 12px;
+    background: #b5d1d5;
+
+    &.toggled {
+      background: lightgreen;
+    }
+  }
+}

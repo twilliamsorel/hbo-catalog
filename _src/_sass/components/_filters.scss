@@ -1,0 +1,15 @@
+.component.filters {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+
+  select {
+    padding: 6px 12px;
+    font-size: 18px;
+    margin-right: 8px;
+
+    option.placeholder {
+      color: green;
+    }
+  }
+}

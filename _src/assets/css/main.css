@@ -1,0 +1,100 @@
+h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.component.card {
+  width: 100%;
+  border: none;
+}
+.component.card img {
+  border-radius: 4px 4px 0 0;
+}
+.component.card header {
+  padding: 8px 12px;
+  background: #555;
+  color: white;
+  min-height: 52px;
+}
+.component.card .body {
+  padding: 12px;
+}
+.component.card .body .rating.green {
+  color: green;
+}
+.component.card .body .genres {
+  margin-top: 12px;
+  list-style: none;
+  padding: 0;
+}
+.component.card .body .genre-tag {
+  background: #666;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.component.card button {
+  border: none;
+  padding: 8px 12px;
+  background: #b5d1d5;
+}
+.component.card button.toggled {
+  background: lightgreen;
+}
+
+.component.filters {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+}
+.component.filters select {
+  padding: 6px 12px;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.component.filters select option.placeholder {
+  color: green;
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: black;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  grid-auto-rows: minmax(100px, auto);
+}
+@media screen and (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 800px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1150px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

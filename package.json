@@ -1,0 +1,23 @@
+{
+  "name": "hbo-catalog-frontend",
+  "version": "1.0.0",
+  "description": "Proof of concept practice app that scrapes the web to build an HBO catalog",
+  "main": "index.js",
+  "scripts": {
+    "dev:client": "npx @11ty/eleventy --serve & sass --watch _src/_sass/main.scss:_src/assets/css/main.css",
+    "dev:server": "node server/index.js"
+  },
+  "author": "Trevor Sorel",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^19.7.2",
+    "sass": "^1.58.3",
+    "sqlite3": "^5.1.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

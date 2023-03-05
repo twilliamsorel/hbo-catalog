@@ -1,0 +1,17 @@
+{% assign genres = genre | split: ',' %}
+<article class="component card">
+  <img src="{{ image }}">
+  <header>
+    <h2>{{ title }}</h2>
+    <span class="date">{{ release_date }}</span>
+  </header>
+  <div class="body">
+    <p>{{ description }}</p>
+    <div>rating: {{ review_score }} ({{ review_count }})</div>
+    <div class="genres">
+      {% for each in genres %}
+      <span class="genre-tag">{{each}}</span>
+      {% endfor %}
+    </div>
+  </div>
+</article>

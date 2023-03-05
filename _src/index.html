@@ -1,0 +1,21 @@
+---
+title: Shows
+layout: default
+---
+
+{% include components/filters.html %}
+
+<section class="card-grid">
+  {% assign query = catalog.shows | sort: 'review_score' | reverse %}
+  {% for movie in query %}
+  {% if movie.review_score > 6 and movie.review_count > 200 %}
+  {% include components/card.html title: movie.title
+  description: movie.description
+  review_score: movie.review_score
+  genre: movie.genre
+  release_date: movie.release_date
+  image: movie.image
+  review_count: movie.review_count %}
+  {% endif %}
+  {% endfor %}
+</section>

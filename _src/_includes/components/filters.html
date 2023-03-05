@@ -1,0 +1,14 @@
+<div class="component filters" id="filters">
+  <select data-name="genre">
+    <option selected value="all">Genre (all)</option>
+    {% for genre in globals.genres %}
+    <option value="{{ genre }}">{{ genre }}</option>
+    {% endfor %}
+  </select>
+
+  <select data-name="sort">
+    <option selected value="review_score">Sort by rating</option>
+    <option value="release_date_asc">Sort by year (asc)</option>
+    <option value="release_date_desc">Sort by year (desc)</option>
+  </select>
+</div>

@@ -1,0 +1,32 @@
+@import 'type';
+
+// COMPONENTS
+@import 'components/card';
+@import 'components/filters';
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: black;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  grid-auto-rows: minmax(100px, auto);
+
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 800px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1150px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
