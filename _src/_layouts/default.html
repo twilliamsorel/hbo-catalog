@@ -23,19 +23,23 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
+  <!-- HTMX -->
+  <script src="/assets/vendor/htmx.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 
 <body class="{{ title | slugify }}">
   <header>
     <h1>{{ title }}</h1>
+    {% include nav.html %}
   </header>
 
   <main>
     {{ content }}
   </main>
 
-  <script type="module" src="/assets/js/init.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
 </body>
 
 </html>

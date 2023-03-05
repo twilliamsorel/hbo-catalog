@@ -21,12 +21,22 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
+  <!-- HTMX -->
+  <script src="/assets/vendor/htmx.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 
 <body class="shows">
   <header>
     <h1>Shows</h1>
+    <nav>
+  <ul>
+    <li><a href="/">Shows</a></li>
+    <li><a href="/movies">Movies</a></li>
+    <li><a href="/watchlist">Watchlist</a></li>
+  </ul>
+</nav>
   </header>
 
   <main>
@@ -90,21 +100,12 @@
     <option value="Western">Western</option>
     
   </select>
-
-  <select data-name="sort">
-    <option selected value="review_score">Sort by rating</option>
-    <option value="release_date_asc">Sort by year (asc)</option>
-    <option value="release_date_desc">Sort by year (desc)</option>
-  </select>
 </div>
 
-<section class="card-grid">
-  
-  
-</section>
+<section class="card-grid" hx-get="http://localhost:3000/api/shows/get-shows/1" hx-trigger="load once"></section>
   </main>
 
-  <script type="module" src="/assets/js/init.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
 </body>
 
 </html>

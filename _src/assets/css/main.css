@@ -75,6 +75,27 @@ body {
   background: black;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  font-size: 24px;
+  color: white;
+}
+header nav ul li {
+  display: inline-block;
+  margin-left: 24px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
