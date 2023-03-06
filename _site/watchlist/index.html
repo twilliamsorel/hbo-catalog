@@ -42,8 +42,9 @@
   <main>
     
 <div class="component filters" id="filters">
-  <select data-name="genre">
-    <option selected value="all">Genre (all)</option>
+  <select name="genre" hx-get="http://localhost:3000/get-programs/watchlist/1" hx-trigger="change"
+    hx-target=".card-grid" hx-swap="innerHTML">
+    <option selected value="">Genre (all)</option>
     
     <option value="Action">Action</option>
     
@@ -102,7 +103,7 @@
   </select>
 </div>
 
-<section class="card-grid" hx-get="http://localhost:3000/api/movies/get-movies/1" hx-trigger="load once"></section>
+<!-- <section class="card-grid" hx-get="http://localhost:3000/api/movies/get-movies/1" hx-trigger="load once"></section> /-->
   </main>
 
   <script type="module" src="/assets/js/main.js"></script>

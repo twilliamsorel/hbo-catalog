@@ -1,6 +1,7 @@
 <div class="component filters" id="filters">
-  <select data-name="genre">
-    <option selected value="all">Genre (all)</option>
+  <select name="genre" hx-get="http://localhost:3000/get-programs/{{ title | slug }}/1" hx-trigger="change"
+    hx-target=".card-grid" hx-swap="innerHTML">
+    <option selected value="">Genre (all)</option>
     {% for genre in globals.genres %}
     <option value="{{ genre }}">{{ genre }}</option>
     {% endfor %}
